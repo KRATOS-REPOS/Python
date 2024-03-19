@@ -1,4 +1,5 @@
 import math
+import os
 from pystyle import *
 def binaryToDecimal(num):
     result = 0
@@ -49,6 +50,11 @@ def logical_OR(bin1, bin2):
     return result
 
 def run():
+    if os.name == 'posix':
+        _ = os.system('clear')
+    # Clear screen for Windows
+    elif os.name == 'nt':
+        _ = os.system('cls')
     Write.Print('''
   _________                _________
  / _______/     //\\\\      / _______/      //\\\\
